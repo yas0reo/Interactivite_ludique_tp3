@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://bmslmk5ockk32"]
 
-[ext_resource type="AudioStream" uid="uid://hjsqfr2ukgp7" path="res://asset/audio/drop-coin-384921.mp3" id="1_3wl40"]
+[ext_resource type="AudioStream" uid="uid://hjsqfr2ukgp7" path="res://assets/audio/drop-coin-384921.mp3" id="1_3wl40"]
 [ext_resource type="Script" uid="uid://bm1scs1tbhmms" path="res://scripts/coffre.gd" id="1_m0kht"]
-[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://asset/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_m0kht"]
+[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_m0kht"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aiuwj"]
 size = Vector2(16, 11)
