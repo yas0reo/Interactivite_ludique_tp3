@@ -24,6 +24,8 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.play("glisser_mur")
 			if Input.is_action_just_pressed("sauter"):
 				velocity.y = JUMP_VELOCITY
+				if has_node("JumpSfx"):
+					$JumpSfx.play()
 				velocity.x = move_toward(velocity.x, 0, sign(velocity.x) * SPEED)
 		else:
 			etat_courant = Etat.SAUT
@@ -45,6 +47,8 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("sauter") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		if has_node("JumpSfx"):
+			$JumpSfx.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("promener_gauche", "promener_droite")
