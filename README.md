@@ -1,4 +1,4 @@
-# exemple--multi-niveaux
+# Exemple Plateforme Niveaux
 
 Projet-exemple de jeu de plateforme 2D avec plusieurs niveaux fait en Godot. Créé pour le cours Interactivité ludique, Automne 2025, Collège Montmorency.
 
