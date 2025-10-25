@@ -1,8 +1,16 @@
-# Exemple Plateforme Niveaux
+# TP2 -  Niveaux, progression et menu
 
-Projet-exemple de jeu de plateforme 2D avec plusieurs niveaux fait en Godot. Créé pour le cours Interactivité ludique, Automne 2025, Collège Montmorency.
+TP2. Jeu de plateforme 2D avec plusieurs niveaux fait en Godot. Créé pour le cours Interactivité ludique, Automne 2025, Collège Montmorency.
+Création d'un jeu avec plusieurs niveaux qui détourne un jeu-base dans une nouvelle direction d'interaction et jouabilité. Exploration de systèmes de progression conditionnel style clé-et-porte et transitions entre scènes. Ce projet peut servir de base pour les projets suivants.
 
-<img width="1203" height="902" alt="image" src="https://github.com/user-attachments/assets/f68630d7-0a05-4cba-a02f-1a19566c5f1a" />
+*Savoirs essentiels, principaux critères d'évaluation*
+Notions d’interaction : interacteur, affordance, engagement et agentivité
+États, niveaux et progression
+Programmation d’un système de clé et de porte
+Progression en fonction de la réussite d’une action
+Transitions de scènes
+Indication visuelle et sonore des réussites et échecs d’interaction
+Intégration d’une interface graphique HUD («Head-Up Display»)
 
 ## Crédits
 
