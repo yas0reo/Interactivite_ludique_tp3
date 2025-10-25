@@ -14,4 +14,5 @@ Intégration d’une interface graphique HUD («Head-Up Display»)
 
 ## Crédits
 
-Paquets de ressources visuels : New Platformer pack, par Kenney <https://kenney.nl/assets/new-platformer-pack>.
+Paquets de ressources visuels : 1-Bit Platformer pack, par Kenney https://kenney.nl/assets/1-bit-platformer-pack
+Ressources audio: https://freesound.org/
