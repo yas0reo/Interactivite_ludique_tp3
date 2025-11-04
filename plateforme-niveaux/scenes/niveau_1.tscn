@@ -964,7 +964,7 @@ tile_map_data = PackedByteArray("AAABAAAAAQAIAAsAAAABAAEAAQADAAAAAAABAAIAAQADAAE
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="player" parent="." instance=ExtResource("3_7poby")]
-position = Vector2(-64, 0)
+position = Vector2(-32, -2)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(0, -81)
@@ -994,6 +994,14 @@ autoplay = "move"
 [node name="coffre" parent="." instance=ExtResource("6_qpur8")]
 visible = false
 position = Vector2(352, 544)
+
+[node name="killZone" parent="." instance=ExtResource("8_s4h1y")]
+position = Vector2(0, 528)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone"]
+shape = SubResource("WorldBoundaryShape2D_gee14")
+
+[node name="music" parent="." instance=ExtResource("9_7hs26")]
 
 [node name="coins" type="Node" parent="."]
 
@@ -1075,14 +1083,6 @@ position = Vector2(3088, 288)
 [node name="coin17" parent="coins" instance=ExtResource("7_emlmr")]
 position = Vector2(1440, -152)
 
-[node name="killZone" parent="." instance=ExtResource("8_s4h1y")]
-position = Vector2(0, 528)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone"]
-shape = SubResource("WorldBoundaryShape2D_gee14")
-
-[node name="music" parent="." instance=ExtResource("9_7hs26")]
-
 [node name="monstre" type="Node" parent="."]
 
 [node name="monster" parent="monstre" instance=ExtResource("10_3yq6r")]
@@ -1162,7 +1162,9 @@ position = Vector2(2976, 384)
 [node name="triangles21" parent="DieTriangles" instance=ExtResource("11_cfsyi")]
 position = Vector2(3040, 448)
 
-[node name="Label" type="Label" parent="."]
+[node name="labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="labels"]
 offset_left = 24.0
 offset_top = -96.0
 offset_right = 356.0
@@ -1171,7 +1173,7 @@ scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 36
 text = "niveau 2, lets go !"
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="labels"]
 offset_left = 275.0
 offset_top = 223.0
 offset_right = 607.0
@@ -1181,7 +1183,7 @@ theme_override_font_sizes/font_size = 36
 text = "et ça descend..."
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
+[node name="Label3" type="Label" parent="labels"]
 offset_left = 1167.0
 offset_top = 414.0
 offset_right = 1499.0
@@ -1191,7 +1193,7 @@ theme_override_font_sizes/font_size = 36
 text = "ps: escalier secret"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="."]
+[node name="Label4" type="Label" parent="labels"]
 offset_left = 680.0
 offset_top = 137.0
 offset_right = 1168.0
@@ -1202,7 +1204,7 @@ text = "attention
  les cones font mal"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="."]
+[node name="Label5" type="Label" parent="labels"]
 offset_left = 1413.0
 offset_top = -67.0
 offset_right = 1921.0
@@ -1212,7 +1214,7 @@ theme_override_font_sizes/font_size = 36
 text = "si tu as reussi a monté, bravo
 sinon, boo lame.."
 
-[node name="Label6" type="Label" parent="."]
+[node name="Label6" type="Label" parent="labels"]
 offset_left = 1862.0
 offset_top = 264.0
 offset_right = 2212.0
@@ -1222,7 +1224,7 @@ theme_override_font_sizes/font_size = 36
 text = "mais qu'est-ce que, 
 un coffre?"
 
-[node name="Label7" type="Label" parent="."]
+[node name="Label7" type="Label" parent="labels"]
 offset_left = 2695.0
 offset_top = 2.0
 offset_right = 3056.0
@@ -1233,18 +1235,18 @@ text = "et on descend vers
  la prote magique"
 horizontal_alignment = 1
 
-[node name="Label8" type="Label" parent="."]
-offset_left = -392.0
-offset_top = 88.0
-offset_right = -31.0
-offset_bottom = 191.0
+[node name="Label8" type="Label" parent="labels"]
+offset_left = -376.0
+offset_top = 152.0
+offset_right = -15.0
+offset_bottom = 255.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 36
 text = "mauvais coté..
 vas par là --->"
 horizontal_alignment = 1
 
-[node name="Label9" type="Label" parent="."]
+[node name="Label9" type="Label" parent="labels"]
 offset_left = 2336.0
 offset_top = 480.0
 offset_right = 3301.0
