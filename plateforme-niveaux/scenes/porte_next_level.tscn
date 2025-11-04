@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://0or7nx282c6x"]
+
+[ext_resource type="Script" uid="uid://c734t82wy04pv" path="res://scripts/porte_next_level.gd" id="1_46tl0"]
+[ext_resource type="Texture2D" uid="uid://cgbdppvt33amn" path="res://assets/sprites/others/tile_0056_door.png" id="2_cxlhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2aoa"]
+size = Vector2(48, 56)
+
+[node name="porteNextLevel" type="Area2D" groups=["player"]]
+script = ExtResource("1_46tl0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("2_cxlhp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_e2aoa")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

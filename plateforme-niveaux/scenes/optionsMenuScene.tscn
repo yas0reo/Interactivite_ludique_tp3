@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=4 uid="uid://dlpmdo22p6nyo"]
 
 [ext_resource type="Script" uid="uid://b5mr7qykgdplr" path="res://scripts/options_menu_scene.gd" id="1_ftmx1"]
-[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://asset/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_6ntck"]
-[ext_resource type="Texture2D" uid="uid://b7eekmqolmvqo" path="res://asset/spritesheets/Tilemap/monochrome_tilemap_packed.png" id="3_pfsje"]
+[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_6ntck"]
+[ext_resource type="Texture2D" uid="uid://b7eekmqolmvqo" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_packed.png" id="3_pfsje"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w11ve"]
 texture = ExtResource("2_6ntck")
@@ -933,7 +933,7 @@ tile_map_data = PackedByteArray("AAADAAgAAAAPAAkAAAAFAAkAAAAQAAkAAAAEAAgAAAARAAk
 tile_set = SubResource("TileSet_mx4kx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
+zoom = Vector2(2, 2)
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/retour" to="." method="_on_retour_pressed"]

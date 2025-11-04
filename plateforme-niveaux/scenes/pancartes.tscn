@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4ljk47hppetp"]
+
+[ext_resource type="Script" uid="uid://b4im0q5wa2new" path="res://scripts/pancartes.gd" id="1_bf7fq"]
+
+[sub_resource type="Animation" id="Animation_7poby"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_cfsyi"]
+resource_name = "texte"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4be3i"]
+_data = {
+&"RESET": SubResource("Animation_7poby"),
+&"texte": SubResource("Animation_cfsyi")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7swxm"]
+size = Vector2(16, 11)
+
+[node name="pancartes" type="Node2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_bf7fq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 10.0
+offset_top = -14.0
+offset_right = 138.0
+offset_bottom = 21.0
+scale = Vector2(0.2, 0.2)
+theme_override_font_sizes/font_size = 25
+text = "texte hello bienvenue"
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4be3i")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7swxm")
