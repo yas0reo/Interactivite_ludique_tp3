@@ -1215,14 +1215,15 @@ text = "si tu as reussi a monté, bravo
 sinon, boo lame.."
 
 [node name="Label6" type="Label" parent="labels"]
-offset_left = 1862.0
+offset_left = 1872.0
 offset_top = 264.0
-offset_right = 2212.0
+offset_right = 2222.0
 offset_bottom = 367.0
 scale = Vector2(0.5, 0.5)
 theme_override_font_sizes/font_size = 36
 text = "mais qu'est-ce que, 
 un coffre?"
+horizontal_alignment = 1
 
 [node name="Label7" type="Label" parent="labels"]
 offset_left = 2695.0
