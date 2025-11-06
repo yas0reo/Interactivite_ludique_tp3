@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2aoa"]
 size = Vector2(48, 56)
 
-[node name="porteNextLevel" type="Area2D" groups=["player"]]
+[node name="porteNextLevel" type="Area2D"]
 script = ExtResource("1_46tl0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -17,4 +17,5 @@ texture = ExtResource("2_cxlhp")
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_e2aoa")
 
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
