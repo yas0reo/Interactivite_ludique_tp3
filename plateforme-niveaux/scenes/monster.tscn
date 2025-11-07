@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://8lro3bsotc2d"]
 
 [ext_resource type="Script" uid="uid://1ajs4b0pf3lv" path="res://scripts/monster.gd" id="1_c47ug"]
-[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://asset/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="1_uwnm8"]
+[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="1_uwnm8"]
 [ext_resource type="PackedScene" uid="uid://dooobeepcj3ax" path="res://scenes/kill_zone.tscn" id="2_1cbnp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1cbnp"]
@@ -56,9 +56,10 @@ frame = 3
 frame_progress = 0.321672
 
 [node name="killZone" parent="." instance=ExtResource("2_1cbnp")]
+position = Vector2(0, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone"]
-position = Vector2(0, -24)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killZone"]
+position = Vector2(0, -40)
 shape = SubResource("RectangleShape2D_c47ug")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]

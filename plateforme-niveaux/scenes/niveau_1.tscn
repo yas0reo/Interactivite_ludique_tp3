@@ -998,7 +998,7 @@ position = Vector2(352, 544)
 [node name="killZone" parent="." instance=ExtResource("8_s4h1y")]
 position = Vector2(0, 528)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killZone"]
 shape = SubResource("WorldBoundaryShape2D_gee14")
 
 [node name="music" parent="." instance=ExtResource("9_7hs26")]

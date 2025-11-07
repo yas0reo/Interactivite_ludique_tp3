@@ -1,5 +1,7 @@
 extends Control
 
+var test = 0
+var porteNextLevel
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/niveau_0.tscn")
