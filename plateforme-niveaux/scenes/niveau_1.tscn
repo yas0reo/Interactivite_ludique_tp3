@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dpohgqosm134e"]
+[gd_scene load_steps=18 format=4 uid="uid://dpohgqosm134e"]
 
 [ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="1_rvx44"]
 [ext_resource type="Texture2D" uid="uid://b7eekmqolmvqo" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_packed.png" id="2_cfsyi"]
@@ -954,8 +954,6 @@ _data = {
 &"move": SubResource("Animation_iywne")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gee14"]
-
 [node name="gamePlay" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -997,9 +995,6 @@ position = Vector2(352, 544)
 
 [node name="killZone" parent="." instance=ExtResource("8_s4h1y")]
 position = Vector2(0, 528)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="killZone"]
-shape = SubResource("WorldBoundaryShape2D_gee14")
 
 [node name="music" parent="." instance=ExtResource("9_7hs26")]
 
