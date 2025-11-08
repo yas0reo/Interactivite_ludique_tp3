@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://b05pqc1q51ibh" path="res://scenes/coin.tscn" id="7_emlmr"]
 [ext_resource type="PackedScene" uid="uid://dooobeepcj3ax" path="res://scenes/kill_zone.tscn" id="8_s4h1y"]
 [ext_resource type="PackedScene" uid="uid://b82esnf1pcakj" path="res://scenes/music.tscn" id="9_7hs26"]
-[ext_resource type="PackedScene" uid="uid://8lro3bsotc2d" path="res://scenes/monster.tscn" id="10_3yq6r"]
 [ext_resource type="PackedScene" uid="uid://2gr2k2e32pej" path="res://scenes/triangleDie.tscn" id="11_cfsyi"]
+[ext_resource type="PackedScene" uid="uid://cnuxkd81a3dul" path="res://scenes/monsters.tscn" id="11_d8tgh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("1_rvx44")
@@ -1080,18 +1080,6 @@ position = Vector2(1440, -152)
 
 [node name="monstre" type="Node" parent="."]
 
-[node name="monster" parent="monstre" instance=ExtResource("10_3yq6r")]
-position = Vector2(544, 264)
-
-[node name="monster2" parent="monstre" instance=ExtResource("10_3yq6r")]
-position = Vector2(1376, 512)
-
-[node name="monster3" parent="monstre" instance=ExtResource("10_3yq6r")]
-position = Vector2(-360, 264)
-
-[node name="monster4" parent="monstre" instance=ExtResource("10_3yq6r")]
-position = Vector2(-184, 264)
-
 [node name="DieTriangles" type="Node" parent="."]
 
 [node name="triangles" parent="DieTriangles" instance=ExtResource("11_cfsyi")]
@@ -1252,3 +1240,6 @@ theme_override_font_sizes/font_size = 36
 text = "si tu vois ca, ya un gros probleme... recommence le jeux
 "
 horizontal_alignment = 1
+
+[node name="monster" parent="." instance=ExtResource("11_d8tgh")]
+position = Vector2(536, 256)

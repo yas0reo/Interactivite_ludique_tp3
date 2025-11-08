@@ -1,23 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://8lro3bsotc2d"]
+[gd_scene load_steps=9 format=3 uid="uid://cnuxkd81a3dul"]
 
-[ext_resource type="Script" uid="uid://1ajs4b0pf3lv" path="res://scripts/monster.gd" id="1_c47ug"]
-[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="1_uwnm8"]
-[ext_resource type="PackedScene" uid="uid://dooobeepcj3ax" path="res://scenes/kill_zone.tscn" id="2_1cbnp"]
+[ext_resource type="Script" uid="uid://1ajs4b0pf3lv" path="res://scripts/monster.gd" id="1_ehta6"]
+[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_64xjs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1cbnp"]
-atlas = ExtResource("1_uwnm8")
+atlas = ExtResource("2_64xjs")
 region = Rect2(0, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c47ug"]
-atlas = ExtResource("1_uwnm8")
+atlas = ExtResource("2_64xjs")
 region = Rect2(16, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlss8"]
-atlas = ExtResource("1_uwnm8")
+atlas = ExtResource("2_64xjs")
 region = Rect2(32, 256, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gp4s5"]
-atlas = ExtResource("1_uwnm8")
+atlas = ExtResource("2_64xjs")
 region = Rect2(48, 256, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gdl1p"]
@@ -40,11 +39,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c47ug"]
-size = Vector2(34, 34)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlss8"]
+size = Vector2(36, 35)
 
-[node name="monster" type="Node2D"]
-script = ExtResource("1_c47ug")
+[node name="monster" type="Area2D"]
+collision_layer = 3
+collision_priority = 1.21
+script = ExtResource("1_ehta6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
@@ -55,13 +56,6 @@ autoplay = "walk"
 frame = 3
 frame_progress = 0.321672
 
-[node name="killZone" parent="." instance=ExtResource("2_1cbnp")]
-position = Vector2(0, 16)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="killZone"]
-position = Vector2(0, -40)
-shape = SubResource("RectangleShape2D_c47ug")
-
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -24)
 target_position = Vector2(24, 0)
@@ -69,3 +63,13 @@ target_position = Vector2(24, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -24)
 target_position = Vector2(-24, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_jlss8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

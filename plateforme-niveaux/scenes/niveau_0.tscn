@@ -7,10 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://d4dx4m5i3k2xe" path="res://scenes/plateform.tscn" id="5_glc0g"]
 [ext_resource type="PackedScene" uid="uid://bmslmk5ockk32" path="res://scenes/coffre.tscn" id="6_o3lg2"]
 [ext_resource type="PackedScene" uid="uid://b05pqc1q51ibh" path="res://scenes/coin.tscn" id="7_vssyr"]
-[ext_resource type="PackedScene" uid="uid://8lro3bsotc2d" path="res://scenes/monster.tscn" id="8_y2jy4"]
 [ext_resource type="PackedScene" uid="uid://dooobeepcj3ax" path="res://scenes/kill_zone.tscn" id="9_4i8s2"]
 [ext_resource type="PackedScene" uid="uid://b82esnf1pcakj" path="res://scenes/music.tscn" id="10_wo5b3"]
 [ext_resource type="PackedScene" uid="uid://0or7nx282c6x" path="res://scenes/porte_next_level.tscn" id="11_170e1"]
+[ext_resource type="PackedScene" uid="uid://cnuxkd81a3dul" path="res://scenes/monsters.tscn" id="11_cdyjk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u5sy4"]
 texture = ExtResource("1_rvlws")
@@ -960,7 +960,7 @@ tile_map_data = PackedByteArray("AAABAAAAAQABAAgAAAABAAEAAQAAAAAAAAABAAIAAQAAAAA
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="porteNextLevel" parent="." instance=ExtResource("11_170e1")]
-position = Vector2(384, 96)
+position = Vector2(288, 96)
 
 [node name="player" parent="." instance=ExtResource("3_1eovg")]
 position = Vector2(-64, 0)
@@ -1070,12 +1070,6 @@ shape = SubResource("WorldBoundaryShape2D_gee14")
 
 [node name="music" parent="." instance=ExtResource("10_wo5b3")]
 
-[node name="monster2" parent="." instance=ExtResource("8_y2jy4")]
-position = Vector2(2327, 256)
-
-[node name="monster3" parent="." instance=ExtResource("8_y2jy4")]
-position = Vector2(-32, 128)
-
 [node name="labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="labels"]
@@ -1179,3 +1173,9 @@ theme_override_font_sizes/font_size = 36
 text = "recommence, car tu 
  peux plus remonter"
 horizontal_alignment = 2
+
+[node name="monster" parent="." instance=ExtResource("11_cdyjk")]
+position = Vector2(-24, 128)
+
+[node name="monster2" parent="." instance=ExtResource("11_cdyjk")]
+position = Vector2(2360, 256)

@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 const SPEED = 60
 
@@ -17,3 +17,8 @@ func _process(delta: float) -> void:
 	
 	position.x += direction * SPEED * delta
 	
+
+func _on_body_entered(body: Node2D) -> void:
+	print("Tu es mort..")
+	if body.name == "player":
+			get_tree().reload_current_scene()
