@@ -31,6 +31,6 @@ animation = &"new_animation"
 
 [node name="killZone" parent="." instance=ExtResource("3_ec8h7")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="killZone"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="killZone"]
 position = Vector2(0, -16)
 shape = SubResource("RectangleShape2D_c47ug")
