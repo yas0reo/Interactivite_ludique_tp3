@@ -42,7 +42,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlss8"]
 size = Vector2(36, 35)
 
-[node name="monster" type="Area2D"]
+[node name="monsters" type="Area2D"]
 collision_layer = 3
 collision_priority = 1.21
 script = ExtResource("1_ehta6")

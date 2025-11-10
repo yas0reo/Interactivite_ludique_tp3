@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://ba5jcthai6gm1"]
+[gd_scene load_steps=6 format=4 uid="uid://cjq0er310183c"]
 
-[ext_resource type="Script" uid="uid://b5h87y1ij6ya8" path="res://scripts/menu.gd" id="1_yqeox"]
-[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_con2f"]
-[ext_resource type="Texture2D" uid="uid://b7eekmqolmvqo" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_packed.png" id="3_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="1_70gu0"]
+[ext_resource type="Texture2D" uid="uid://b7eekmqolmvqo" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_packed.png" id="2_08607"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_con2f"]
-texture = ExtResource("2_con2f")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24yaq"]
+texture = ExtResource("1_70gu0")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -403,8 +402,8 @@ texture = ExtResource("2_con2f")
 18:19/0 = 0
 19:19/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhnvy"]
-texture = ExtResource("3_mhnvy")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lxfsg"]
+texture = ExtResource("2_08607")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -877,76 +876,36 @@ texture = ExtResource("3_mhnvy")
 18:19/0 = 0
 19:19/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_v86rl"]
+[sub_resource type="TileSet" id="TileSet_e4dr8"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "plateforme 0"
 terrain_set_0/terrain_0/color = Color(0.505198, 0.28952, 0.52327, 1)
-sources/0 = SubResource("TileSetAtlasSource_con2f")
-sources/1 = SubResource("TileSetAtlasSource_mhnvy")
+sources/0 = SubResource("TileSetAtlasSource_24yaq")
+sources/1 = SubResource("TileSetAtlasSource_lxfsg")
 
-[node name="menu" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yqeox")
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-modulate = Color(0, 0.482353, 1, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -31.0
-offset_right = 35.0
-offset_bottom = 70.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="start" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Start"
-
-[node name="options" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Options"
-
-[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Quitter
-"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(-576, -324)
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAADAAgAAAAPAAkAAAAFAAkAAAAQAAkAAAAEAAgAAAARAAkAAAABAAAAAAAHAAUAAAABAAEAAAAHAAUAAAABAAIAAAAHAAYAAAACAAIAAAAIAAYAAAAFAAEAAAAIAAYAAAAGAAAAAAAJAAUAAAADAAIAAAAJAAYAAAAGAAEAAAAJAAYAAAAEAAEAAAAIAAYAAAADAAEAAAAPABIAAAADAAkAAAAPAA4AAAAIAAgAAAARAA4AAAAQAAAAAAAHAAwAAAAMAAEAAAAJAAsAAAAMAAIAAAAHAA0AAAAJAAEAAAAHAAsAAAAJAAMAAAAJAA0AAAACAAMAAAAHAA0AAAADAAMAAAAIAA0AAAAEAAMAAAAIAA0AAAAHAAMAAAAIAA0AAAANAAMAAAAEAAAAAAAJAAIAAAAJAAwAAAAQAAIAAAAJAA0AAAALAAEAAAAIAA0AAAAPAAMAAAAGAAAAAAAKAAEAAAAIAAsAAAAGAAMAAAAIAAsAAAAFAAMAAAAIAAsAAAAIAAMAAAAIAAsAAAAOAAMAAAAFAAAAAAABAAYAAAACAAgAAAAAAAYAAAABAAgAAAACAAYAAAACAAgAAAARAAAAAAARAAUAAAAQAAkAAAAQAAIAAAARAAkAAAARAAcAAAARAAgAAAARAAYAAAARAAcAAAARAAYAAAAAAAAAAAAPAAUAAAARAAYAAAARAAYAAAARAAUAAAARAAYAAAARAAQAAAARAAYAAAARAAMAAAARAAYAAAARAAIAAAARAAYAAAARAAEAAAARAAYAAAAPAAkAAAAQAAcAAAANAAkAAAAQAAcAAAALAAkAAAABAAYAAAAJAAkAAAAQAAcAAAAAAAkAAAAPAAcAAAAEAAkAAAATAA0AAAAGAAkAAAATAAwAAAAGAAgAAAAPAAoAAAAHAAcAAAAQAAkAAAAIAAcAAAARAAkAAAAIAAkAAAARAAoAAAALAAcAAAABAAMAAAANAAQAAAAEAAEAAAANAAUAAAAEAAIAAAAOAAUAAAAFAAIAAAAPAAQAAAAGAAEAAAAPAAUAAAAGAAIAAAAKAAIAAAADAAAAAAAKAAQAAAADAAIAAAAKAAMAAAADAAEAAAANAAIAAAAIAA0AAAAOAAIAAAAIAA0AAAAPAAIAAAAIAAsAAAAAAAEAAAAPAAYAAAAAAAIAAAAPAAYAAAAAAAMAAAAPAAYAAAAAAAQAAAAPAAYAAAAAAAUAAAABAAcAAAABAAUAAAACAAcAAAACAAUAAAANAAMAAAABAAkAAAAHABMAAAACAAkAAAAIABMAAAAHAAgAAAAOAAIAAAAHAAkAAAAOAAEAAAAEAAIAAAAQAAAAAAALAAAAAAARAAAAAAAPAAEAAAAQAAAAAAAHAAIAAAARAAAAAAANAAEAAAASAAEAAAAHAAAAAAATAAAAAAAHAAEAAAATAAEAAAAOAAEAAAAMAAMAAAAKAAAAAAAQAAAAAAAFAAIAAAASAAEAAAAIAAEAAAAOAAAAAAAIAAIAAAAOAAEAAAAMAAkAAAAQAAcAAAAKAAkAAAAFAAoAAAAAAAgAAAAPAAYAAAAAAAcAAAAPAAYAAAAQAAgAAAAOAAQAAAAOAAkAAAAQAAcAAAAOAAcAAAAGAAMAAAAKAAgAAAAGAAkAAAAFAAgAAAAJABMAAAAEAAYAAAAGABAAAAAFAAQAAAAGAAgAAAAGAAQAAAAGAAgAAAABAAQAAAAFABEAAAABAAMAAAAFABAAAAAIAAYAAAAEAAsAAAAKAAYAAAAEAAMAAAALAAYAAAAGAAMAAAANAAcAAAAEAAMAAAAIAAQAAAAGAAgAAAALAAgAAAABAAQAAAAJAAAAAAAMAAMAAAAOAAAAAAAGAAgAAAAGAAcAAAAPAA0AAAAHAAYAAAADAAsAAAAGAAYAAAADAAsAAAACAAEAAAAHAAAAAAACAAAAAAAPABIAAAADAAAAAAAKAAAAAAAEAAAAAAAPABIAAAAFAAAAAAAJAAAAAAAOAAQAAAAFAAEAAAA=")
-tile_set = SubResource("TileSet_v86rl")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+tile_set = SubResource("TileSet_e4dr8")
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 1
-offset_left = 40.0
-offset_top = 28.0
-offset_right = 407.0
-offset_bottom = 92.0
-scale = Vector2(0.5, 0.5)
-theme_override_font_sizes/font_size = 40
-text = "Industrial Picxel "
-horizontal_alignment = 1
+layout_mode = 0
+offset_left = 552.0
+offset_top = 344.0
+offset_right = 888.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 23
+text = "Bravo, vous avez finis le jeux !!"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 368)
+zoom = Vector2(1.5, 1.5)
