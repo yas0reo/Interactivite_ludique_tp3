@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://cjq0er310183c"]
+[gd_scene load_steps=7 format=4 uid="uid://cjq0er310183c"]
 
 [ext_resource type="Texture2D" uid="uid://dlwnhxwrahssi" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_transparent_packed.png" id="1_70gu0"]
+[ext_resource type="Script" uid="uid://cx2d1ghmfi2pm" path="res://scripts/fin.gd" id="1_08607"]
 [ext_resource type="Texture2D" uid="uid://b7eekmqolmvqo" path="res://assets/spritesheets/Tilemap/monochrome_tilemap_packed.png" id="2_08607"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_24yaq"]
@@ -891,6 +892,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_08607")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(4, 4)
@@ -909,3 +911,33 @@ text = "Bravo, vous avez finis le jeux !!"
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 368)
 zoom = Vector2(1.5, 1.5)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+modulate = Color(0, 0.482353, 1, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = 52.0
+offset_right = 350.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="retour" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Retour"
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quitter
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/retour" to="." method="_on_retour_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

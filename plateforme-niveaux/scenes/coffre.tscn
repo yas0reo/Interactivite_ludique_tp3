@@ -8,7 +8,7 @@
 size = Vector2(16, 11)
 
 [sub_resource type="Animation" id="Animation_11l1o"]
-length = 0.001
+length = 100.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -48,6 +48,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_d14el"]
 resource_name = "coffre"
+length = 30.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -93,10 +94,10 @@ tracks/3/path = NodePath("../AnimatedSprite2D:animation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.3, 29.9667),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [&"closed", &"open"]
+"values": [&"closed", &"open", &"open"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1ikuy"]
